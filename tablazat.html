@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Táblázat – CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="tablazat.html" class="active">Táblázat</a></li>
+            <li><a href="html5.html">HTML5</a></li>
+            <li><a href="chart.html">ChartJS</a></li>
+            <li><a href="ajax.html">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+            <li><a href="react.html">React</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Forma 1 2025 Versenynaptár</h2>
+
+        <input type="text" id="searchInput" placeholder="Keresés..." onkeyup="filterTable()">
+        
+        <table id="crudTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Ország</th>
+                    <th onclick="sortTable(1)">Város</th>
+                    <th onclick="sortTable(2)">Pálya neve</th>
+                    <th onclick="sortTable(3)">Időpont</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Itt jelennek meg a sorok -->
+            </tbody>
+        </table>
+
+        <h3>Új versenyhétvége felvitele</h3>
+        <input type="text" id="countryInput" placeholder="Ország">
+        <input type="text" id="cityInput" placeholder="Város">
+        <input type="text" id="tracknameInput" placeholder="Pálya neve">
+        <input type="date" id="dateInput" placeholder="Időpont">
+        <button onclick="addRow()">Hozzáadás</button>
+    </div>
+
+    <footer>
+        <p>Készítette: Gellén Tamás | Neptun kód: FH4U3E</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
