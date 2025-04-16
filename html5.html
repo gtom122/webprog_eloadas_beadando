@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 API Példák</title>
+    <style>
+        section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML5 API Példák</h1>
+
+    <section id="webStorage">
+        <h2>Web Storage</h2>
+        <input type="text" id="storageInput" placeholder="Írj be valamit">
+        <button onclick="mentes()">Mentés</button>
+        <p id="storageOutput"></p>
+    </section>
+
+    <section id="geolocation">
+        <h2>Geolocation API</h2>
+        <button onclick="getLocation()">Helyzet lekérése</button>
+        <p id="locationOutput"></p>
+    </section>
+
+    <section id="canvas">
+        <h2>Canvas</h2>
+        <canvas id="rajzCanvas" width="200" height="200" style="border:1px solid #000;"></canvas>
+    </section>
+
+    <script src="html5.js"></script>
+
+</body>
+</html>
+
+<section id="webWorkers">
+    <h2>Web Workers</h2>
+    <button onclick="startWorker()">Számolás indítása</button>
+    <p id="workerOutput"></p>
+</section>
+
+<section id="sse">
+    <h2>Server-Sent Events</h2>
+    <p id="sseOutput">Várakozás az adatokra...</p>
+</section>
+
+<section id="dragdrop">
+    <h2>Drag and Drop API</h2>
+    <div id="dragMe" draggable="true" style="width: 100px; height: 100px; background: red;"></div>
+    <div id="dropZone" style="width: 200px; height: 200px; border: 2px dashed black; margin-top: 20px;"></div>
+</section>
+
+<section id="svg">
+    <h2>SVG Grafika</h2>
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="50" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+</section>
+
+<section id="sse">
+    <h2>Server-Sent Events</h2>
+    <p id="sseOutput">Kapcsolódás a szerverhez...</p>
+</section>
