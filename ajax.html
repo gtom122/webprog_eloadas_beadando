@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX feladat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>AJAX CRUD feladat</h1>
+
+  <!-- Read -->
+  <section>
+    <h2>Adatok listázása</h2>
+    <button onclick="loadData()">Adatok betöltése</button>
+    <div id="data-container"></div>
+    <div id="stats"></div>
+  </section>
+
+  <!-- Create -->
+  <section>
+    <h2>Új adat hozzáadása</h2>
+    <input type="text" id="create-name" placeholder="Név">
+    <input type="number" id="create-height" placeholder="Magasság">
+    <button onclick="createData()">Hozzáadás</button>
+  </section>
+
+  <!-- Update -->
+  <section>
+    <h2>Adat módosítása</h2>
+    <input type="number" id="update-id" placeholder="ID">
+    <button onclick="getDataForId()">Adat betöltése</button><br>
+    <input type="text" id="update-name" placeholder="Új név">
+    <input type="number" id="update-height" placeholder="Új magasság">
+    <button onclick="updateData()">Mentés</button>
+  </section>
+
+  <!-- Delete -->
+  <section>
+    <h2>Adat törlése</h2>
+    <input type="number" id="delete-id" placeholder="Törlendő ID">
+    <button onclick="deleteData()">Törlés</button>
+  </section>
+
+  <div id="message"></div>
+
+  <script src="ajax.js"></script>
+</body>
+</html>
