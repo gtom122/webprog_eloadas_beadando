@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #1c1c1c, #333);
+    color: white;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #f1c40f;
+  }
+  
+  .driver-card {
+    background-color: #2c3e50;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+  }
+  
+  .driver-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .driver-name {
+    font-size: 1.5rem;
+    color: #e74c3c;
+  }
+  
+  .driver-team {
+    color: #3498db;
+  }
+  
+  .driver-wins {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
