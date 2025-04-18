@@ -9,6 +9,14 @@
   <h1>🏁 Forma 1 Pilóták</h1>
   <div id="container"></div>
 
-  <script src="oojs.js"></script>
+<h2>➕ Új pilóta hozzáadása</h2>
+<form id="addDriverForm">
+  <input type="text" id="name" placeholder="Név" maxlength="30" required>
+  <input type="text" id="team" placeholder="Legsikeresebb csapat" maxlength="30" required>
+  <input type="number" id="wins" placeholder="Győzelmek száma" min="0" required>
+  <button type="submit">Hozzáadás</button>
+</form>
+
+<script src="oojs.js"></script>
 </body>
 </html>

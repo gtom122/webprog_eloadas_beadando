@@ -11,7 +11,7 @@ class Driver {
 
     card.innerHTML = `
       <div class="driver-name">${this.name}</div>
-      <div class="driver-team">Csapat: ${this.team}</div>
+      <div class="driver-team">Legsikeresebb csapat: ${this.team}</div>
       <div class="driver-wins">Győzelmek: ${this.wins}</div>
     `;
 
@@ -44,3 +44,24 @@ const drivers = [
 ];
 
 drivers.forEach(driver => driver.render());
+
+document.getElementById("addDriverForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Ne töltse újra az oldalt
+
+  const name = document.getElementById("name").value.trim();
+  const team = document.getElementById("team").value.trim();
+  const wins = document.getElementById("wins").value.trim();
+
+  // Egyszerű validáció
+  if (!name || !team || wins === "" || name.length > 30 || team.length > 30) {
+    alert("Kérlek töltsd ki helyesen az összes mezőt!");
+    return;
+  }
+
+  const newDriver = new Driver(name, team, parseInt(wins));
+  newDriver.render();
+
+  // Űrlap kiürítése
+  this.reset();
+});
+
