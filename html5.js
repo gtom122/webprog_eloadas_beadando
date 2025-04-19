@@ -28,7 +28,7 @@ ctx.fillRect(50, 50, 100, 100);
 function startWorker() {
     if (typeof Worker !== "undefined") {
         let worker = new Worker("worker.js");
-        worker.postMessage(10000000); // Küldünk egy számot a workernek
+        worker.postMessage(10000000);
 
         worker.onmessage = function(e) {
             document.getElementById("workerOutput").innerText = "Eredmény: " + e.data;
@@ -40,7 +40,7 @@ function startWorker() {
 
 // Server-Sent Events (SSE)
 if (typeof EventSource !== "undefined") {
-    let eventSource = new EventSource("sse.php"); // Kell egy szerveroldali PHP fájl!
+    let eventSource = new EventSource("sse.php"); // php fájl?
     eventSource.onmessage = function(e) {
         document.getElementById("sseOutput").innerText = "Üzenet a szervertől: " + e.data;
     };

@@ -46,7 +46,7 @@ const drivers = [
 drivers.forEach(driver => driver.render());
 
 document.getElementById("addDriverForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // Ne töltse újra az oldalt
+  e.preventDefault(); 
 
   const name = document.getElementById("name").value.trim();
   const team = document.getElementById("team").value.trim();
